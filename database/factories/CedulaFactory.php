@@ -13,8 +13,7 @@ class CedulaFactory extends Factory
     public function definition()
     {
         return [
-			'tipo_cedula' => $this->faker->name,
-			'num_cedula' => $this->faker->name,
+			'tipo_cliente' => $this->faker->name,
         ];
     }
 }

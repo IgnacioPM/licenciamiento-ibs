@@ -15,8 +15,7 @@ class CreateCedulaTable extends Migration
     {
         Schema::create('cedula', function (Blueprint $table) {
             $table->id();
-            $table->string('tipo_cedula', 1)->nullable();
-            $table->string('num_cedula', 45)->nullable();
+            $table->string('tipo_cliente', 45);
             $table->timestamps();
         });
     }

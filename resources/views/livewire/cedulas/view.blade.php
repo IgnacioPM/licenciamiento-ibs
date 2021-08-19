@@ -10,7 +10,7 @@
 							Cedula Listing </h4>
 						</div>
 						<div wire:poll.60s>
-							<code><h5>{{ now()->format('H:i') }} CST</h5></code>
+							<code><h5>{{ now()->format('H:i:s') }} UTC</h5></code>
 						</div>
 						@if (session()->has('message'))
 						<div wire:poll.4s class="btn btn-sm btn-success" style="margin-top:0px; margin-bottom:0px;"> {{ session('message') }} </div>
@@ -32,8 +32,7 @@
 						<thead class="thead">
 							<tr> 
 								<td>#</td> 
-								<th>Tipo Cedula</th>
-								<th>Num Cedula</th>
+								<th>Tipo Cliente</th>
 								<td>ACTIONS</td>
 							</tr>
 						</thead>
@@ -41,8 +40,7 @@
 							@foreach($cedulas as $row)
 							<tr>
 								<td>{{ $loop->iteration }}</td> 
-								<td>{{ $row->tipo_cedula }}</td>
-								<td>{{ $row->num_cedula }}</td>
+								<td>{{ $row->tipo_cliente }}</td>
 								<td width="90">
 								<div class="btn-group">
 									<button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

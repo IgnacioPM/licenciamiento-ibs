@@ -13,7 +13,7 @@ class Cedula extends Model
 
     protected $table = 'cedula';
 
-    protected $fillable = ['tipo_cedula','num_cedula'];
+    protected $fillable = ['tipo_cliente'];
 	
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany

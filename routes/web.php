@@ -22,6 +22,9 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Route Hooks - Do not delete//
+	Route::view('cedula', 'livewire.cedulas.index')->middleware('auth');
+	Route::view('cedula', 'livewire.cedulas.index')->middleware('auth');
+	Route::view('cedula', 'livewire.cedulas.index')->middleware('auth');
 	Route::view('solicitud', 'livewire.solicituds.index')->middleware('auth');
 	Route::view('contrato', 'livewire.contratos.index')->middleware('auth');
 	Route::view('comercio', 'livewire.comercios.index')->middleware('auth');

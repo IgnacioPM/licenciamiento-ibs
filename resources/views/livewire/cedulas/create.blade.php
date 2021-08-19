@@ -11,12 +11,8 @@
            <div class="modal-body">
 				<form>
             <div class="form-group">
-                <label for="tipo_cedula"></label>
-                <input wire:model="tipo_cedula" type="text" class="form-control" id="tipo_cedula" placeholder="Tipo Cedula">@error('tipo_cedula') <span class="error text-danger">{{ $message }}</span> @enderror
-            </div>
-            <div class="form-group">
-                <label for="num_cedula"></label>
-                <input wire:model="num_cedula" type="text" class="form-control" id="num_cedula" placeholder="Num Cedula">@error('num_cedula') <span class="error text-danger">{{ $message }}</span> @enderror
+                <label for="tipo_cliente"></label>
+                <input wire:model="tipo_cliente" type="text" class="form-control" id="tipo_cliente" placeholder="Tipo Cliente">@error('tipo_cliente') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
 
                 </form>

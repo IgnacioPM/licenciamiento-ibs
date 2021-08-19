@@ -11,7 +11,7 @@ class Cedulas extends Component
     use WithPagination;
 
 	protected $paginationTheme = 'bootstrap';
-    public $selected_id, $keyWord, $tipo_cedula, $num_cedula;
+    public $selected_id, $keyWord, $tipo_cliente;
     public $updateMode = false;
 
     public function render()
@@ -19,8 +19,7 @@ class Cedulas extends Component
 		$keyWord = '%'.$this->keyWord .'%';
         return view('livewire.cedulas.view', [
             'cedulas' => Cedula::latest()
-						->orWhere('tipo_cedula', 'LIKE', $keyWord)
-						->orWhere('num_cedula', 'LIKE', $keyWord)
+						->orWhere('tipo_cliente', 'LIKE', $keyWord)
 						->paginate(10),
         ]);
     }
@@ -33,18 +32,17 @@ class Cedulas extends Component
 	
     private function resetInput()
     {		
-		$this->tipo_cedula = null;
-		$this->num_cedula = null;
+		$this->tipo_cliente = null;
     }
 
     public function store()
     {
         $this->validate([
+		'tipo_cliente' => 'required',
         ]);
 
         Cedula::create([ 
-			'tipo_cedula' => $this-> tipo_cedula,
-			'num_cedula' => $this-> num_cedula
+			'tipo_cliente' => $this-> tipo_cliente
         ]);
         
         $this->resetInput();
@@ -57,8 +55,7 @@ class Cedulas extends Component
         $record = Cedula::findOrFail($id);
 
         $this->selected_id = $id; 
-		$this->tipo_cedula = $record-> tipo_cedula;
-		$this->num_cedula = $record-> num_cedula;
+		$this->tipo_cliente = $record-> tipo_cliente;
 		
         $this->updateMode = true;
     }
@@ -66,13 +63,13 @@ class Cedulas extends Component
     public function update()
     {
         $this->validate([
+		'tipo_cliente' => 'required',
         ]);
 
         if ($this->selected_id) {
 			$record = Cedula::find($this->selected_id);
             $record->update([ 
-			'tipo_cedula' => $this-> tipo_cedula,
-			'num_cedula' => $this-> num_cedula
+			'tipo_cliente' => $this-> tipo_cliente
             ]);
 
             $this->resetInput();

@@ -21,6 +21,7 @@ class CreateAfiliadosTable extends Migration
             $table->string('telefono_afiliado', 12);
             $table->string('correo_afiliado', 45);
             $table->unsignedBigInteger('id_tipo_cedula');
+            $table->string('num_cedula', 45)->nullable();
             $table->string('puesto_afiliado', 45)->nullable();
             $table->unsignedBigInteger('id_canton');
             $table->string('geolocalizacion', 45)->nullable();
