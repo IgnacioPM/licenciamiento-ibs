@@ -36,6 +36,24 @@
 					@auth()
                     <ul class="navbar-nav mr-auto">
 						<!--Nav Bar Hooks - Do not delete!!-->
+						<li class="nav-item">
+                            <a href="{{ url('/solicitud') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Solicitud</a> 
+                        </li>
+						<li class="nav-item">
+                            <a href="{{ url('/contrato') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Contrato</a> 
+                        </li>
+						<li class="nav-item">
+                            <a href="{{ url('/comercio') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Comercio</a> 
+                        </li>
+						<li class="nav-item">
+                            <a href="{{ url('/cliente') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Cliente</a> 
+                        </li>
+						<li class="nav-item">
+                            <a href="{{ url('/cedula') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Cedula</a> 
+                        </li>
+						<li class="nav-item">
+                            <a href="{{ url('/capacitacion') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Capacitacion</a> 
+                        </li>
                     </ul>
 					@endauth()
 					
