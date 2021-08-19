@@ -6,7 +6,7 @@ return [
     //default configs
     'table_naming_scheme' => env('LMG_TABLE_NAMING_SCHEME', '[Timestamp]_create_[TableName]_table.php'),
     'view_naming_scheme'  => env('LMG_VIEW_NAMING_SCHEME', '[Timestamp]_create_[ViewName]_view.php'),
-    'path'                => env('LMG_OUTPUT_PATH', 'tests/database/migrations'),
+    'path'                => env('LMG_OUTPUT_PATH', 'database/migrations'),
     'skippable_tables'    => env('LMG_SKIPPABLE_TABLES', 'migrations'),
     'skip_views'          => env('LMG_SKIP_VIEWS', false),
     'skippable_views'     => env('LMG_SKIPPABLE_VIEWS', ''),
