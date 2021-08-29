@@ -18,6 +18,9 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('/public', function () {
+    return view('admin_IBS');
+});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
