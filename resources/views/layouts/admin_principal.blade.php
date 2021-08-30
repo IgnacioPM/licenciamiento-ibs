@@ -39,10 +39,10 @@
 
         <!-- Main -->
         <div id="main">
-            <div class="inner">
+            <!-- Header -->
+            @include('includes.header')
 
-                <!-- Header -->
-                @include('includes.header')
+            <div class="inner">
 
                 <!-- body -->
                 <main class="py-2">
@@ -60,8 +60,7 @@
             $('#exampleModal').modal('hide');
         });
     </script>
-</body>
-<!-- Scripts -->
+    <!-- Scripts -->
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
 
@@ -70,7 +69,6 @@
 <script src="assets/js/transition.js"></script>
 <script src="assets/js/owl-carousel.js"></script>
 <script src="assets/js/custom.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 <script>
     function loadLocation() {
@@ -119,4 +117,6 @@
     });
 
 </script>
+</body>
+
 </html>

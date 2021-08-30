@@ -18,9 +18,9 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::get('/public', function () {
-    return view('admin_IBS');
-});
+Route::get('/', function () {return view('welcome');})->middleware('auth');
+Route::get('public', function () {return view('admin_IBS');})->middleware('auth')
+;
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
