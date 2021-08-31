@@ -51,7 +51,7 @@
             </div>
         </div>
         <!-- Sidebar -->
-        @include('includes.sidebar')
+        {{-- @include('includes.sidebar') --}}
         @include('includes.btnScrollUp')
     </div>
     @livewireScripts
